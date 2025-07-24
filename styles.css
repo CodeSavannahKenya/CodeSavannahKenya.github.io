@@ -112,6 +112,76 @@ footer {
   font-size: 1rem;
 }
 
+.portfolio {
+  background: #fffbe6;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(236,136,39,0.08);
+  margin-bottom: 2rem;
+}
+.portfolio h2 {
+  color: #bc392a;
+}
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.portfolio-item {
+  background: #436221;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  font-weight: 600;
+  flex: 1 1 180px;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(67,98,33,0.07);
+}
+
+.tools {
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(67,98,33,0.04);
+  margin-bottom: 2rem;
+}
+.tools h2 {
+  color: #436221;
+}
+.tools-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+.tools-list li {
+  background: #bc392a;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 1rem;
+  box-shadow: 0 1px 4px rgba(188,57,42,0.07);
+}
+
+.services ul li a {
+  display: block;
+  background: #ec8827;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  text-decoration: none;
+  margin: 0.5rem 0;
+  box-shadow: 0 1px 4px rgba(188,57,42,0.07);
+  transition: background 0.2s, color 0.2s;
+}
+.services ul li a:hover {
+  background: #bc392a;
+  color: #fff;
+}
+
 @media (max-width: 700px) {
   .header-flex {
     flex-direction: column;
