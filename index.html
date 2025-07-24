@@ -20,6 +20,7 @@
         <a href="index.html">Home</a>
         <a href="odoo.html">Odoo</a>
         <a href="shopify.html">Shopify</a>
+        <a href="woocommerce.html">WooCommerce</a>
       </nav>
     </div>
   </header>
@@ -34,7 +35,7 @@
     <div class="container hero-content">
       <h1>Code Savannah</h1>
       <p class="tagline">Powering Digital Growth, One Solution at a Time</p>
-      <a href="#book" class="cta-btn">Book a Consultation</a>
+      <a href="book.html" class="cta-btn">Book a Consultation</a>
     </div>
   </section>
   <section class="about-blurb">
@@ -58,41 +59,64 @@
       </ul>
     </div>
   </section>
-  <section id="portfolio" class="portfolio">
+  <section class="feature-cards">
     <div class="container">
-      <h2>Our Portfolio</h2>
-      <div class="portfolio-list">
-        <div class="portfolio-item">Savannah Bank</div>
-        <div class="portfolio-item">GreenTech Solutions</div>
-        <div class="portfolio-item">Urban Eats</div>
-        <div class="portfolio-item">EduSmart Africa</div>
-        <div class="portfolio-item">HealthSync</div>
+      <div class="cards-grid">
+        <div class="feature-card">
+          <img src="https://placehold.co/300x180?text=Image+1" alt="Feature 1" class="feature-card-img">
+          <div class="feature-card-body">
+            <h3>Inventory management</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vitae velit ex.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <img src="https://placehold.co/300x180?text=Image+2" alt="Feature 2" class="feature-card-img">
+          <div class="feature-card-body">
+            <h3>Order fulfillment</h3>
+            <p>Maecenas sit amet tincidunt elit. Nullam sagittis, urna eu placerat dictum, sapien.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <img src="customerexperience.jpg" alt="Customer experience" class="feature-card-img">
+          <div class="feature-card-body">
+            <h3>Customer experience</h3>
+            <p>Curabitur ac lacus arcu. Sed vehicula varius lectus auctor viverra. Nulla vehicula.</p>
+          </div>
+        </div>
+        <div class="feature-card">
+          <img src="https://placehold.co/300x180?text=Image+4" alt="Feature 4" class="feature-card-img">
+          <div class="feature-card-body">
+            <h3>Scaling operations</h3>
+            <p>Morbi nec enim nunc. Phasellus bibendum turpis ut ipsum egestas, sed sollicitudin.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
-  <section id="tools" class="tools">
-    <div class="container">
-      <h2>Programming Tools & Languages</h2>
-      <ul class="tools-list">
-        <li>Python</li>
-        <li>JavaScript (Node.js, React)</li>
-        <li>Java</li>
-        <li>Docker</li>
-        <li>Kubernetes</li>
-        <li>AWS & Azure</li>
-        <li>PostgreSQL & MongoDB</li>
-        <li>Git & GitHub</li>
-        <li>Linux</li>
-      </ul>
-    </div>
-  </section>
-  <section id="book" class="book">
-    <div class="container">
-      <h2>Book a Consultation</h2>
-      <div class="calendly-inline-widget" data-url="https://calendly.com/codesavannahkenya/30min" style="min-width:320px;height:630px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    </div>
-  </section>
+  <script>
+// Simple carousel logic
+const logos = document.querySelectorAll('.portfolio-logo-svg');
+const leftBtn = document.querySelector('.carousel-btn-left');
+const rightBtn = document.querySelector('.carousel-btn-right');
+let startIdx = 0;
+const visible = 4;
+function updateCarousel() {
+  logos.forEach((logo, i) => {
+    logo.style.display = (i >= startIdx && i < startIdx + visible) ? 'inline-flex' : 'none';
+  });
+}
+if (logos.length > 0) {
+  updateCarousel();
+  leftBtn.addEventListener('click', () => {
+    startIdx = Math.max(0, startIdx - 1);
+    updateCarousel();
+  });
+  rightBtn.addEventListener('click', () => {
+    startIdx = Math.min(logos.length - visible, startIdx + 1);
+    updateCarousel();
+  });
+}
+</script>
   <footer>
     <div class="container footer-flex footer-multi">
       <div class="footer-section">
