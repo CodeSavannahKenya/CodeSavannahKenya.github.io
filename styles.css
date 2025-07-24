@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: #fff;
+  color: #222;
+}
+
+header {
+  background: #436221;
+  color: #fff;
+  padding: 0.5rem 0;
+}
+.header-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.logo {
+  height: 60px;
+  width: auto;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 2rem;
+  font-weight: 700;
+  transition: color 0.2s;
+}
+nav a:hover {
+  color: #ec8827;
+}
+
+.hero {
+  background: linear-gradient(135deg, #436221 60%, #ec8827 100%);
+  color: #fff;
+  text-align: center;
+  padding: 5rem 1.5rem 4rem 1.5rem;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.tagline {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+.cta-btn {
+  background: #bc392a;
+  color: #fff;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+.cta-btn:hover {
+  background: #ec8827;
+  color: #fff;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.about, .services, .book {
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(67,98,33,0.04);
+  margin-bottom: 2rem;
+}
+.about h2, .services h2, .book h2 {
+  color: #436221;
+  margin-top: 0;
+}
+.services ul {
+  list-style: none;
+  padding: 0;
+}
+.services li {
+  background: #ec8827;
+  color: #fff;
+  margin: 0.5rem 0;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  box-shadow: 0 1px 4px rgba(188,57,42,0.07);
+}
+
+.book h2 {
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: #436221;
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 0 1rem 0;
+  font-size: 1rem;
+}
+
+@media (max-width: 700px) {
+  .header-flex {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav {
+    margin-top: 1rem;
+  }
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+  .container {
+    padding: 1rem 0.5rem;
+  }
+  .logo {
+    height: 45px;
+  }
+} 
