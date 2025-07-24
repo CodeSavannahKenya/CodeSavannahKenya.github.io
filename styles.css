@@ -5,10 +5,23 @@ body {
   color: #222;
 }
 
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.site-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+  letter-spacing: 1px;
+}
+
 header {
-  background: #436221;
-  color: #fff;
+  background: #fff;
+  color: #222;
   padding: 0.5rem 0;
+  border-bottom: 1px solid #eee;
 }
 .header-flex {
   display: flex;
@@ -19,23 +32,25 @@ header {
   padding: 0 1.5rem;
 }
 .logo {
-  height: 60px;
+  height: 90px;
   width: auto;
 }
 nav a {
-  color: #fff;
+  color: #222;
   text-decoration: none;
   margin-left: 2rem;
   font-weight: 700;
   transition: color 0.2s;
+  opacity: 1;
+  visibility: visible;
 }
 nav a:hover {
   color: #ec8827;
 }
 
 .hero {
-  background: linear-gradient(135deg, #436221 60%, #ec8827 100%);
-  color: #fff;
+  background: #fff;
+  color: #222;
   text-align: center;
   padding: 5rem 1.5rem 4rem 1.5rem;
 }
@@ -43,6 +58,7 @@ nav a:hover {
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 700;
+  color: #222;
 }
 .tagline {
   font-size: 1.5rem;
@@ -76,14 +92,15 @@ section {
   margin-bottom: 2rem;
 }
 
-.about, .services, .book {
-  background: #f7f7f7;
+.about, .services, .portfolio, .tools, .book, .team {
+  background: #fff;
+  color: #222;
   border-radius: 12px;
   box-shadow: 0 2px 8px rgba(67,98,33,0.04);
   margin-bottom: 2rem;
 }
-.about h2, .services h2, .book h2 {
-  color: #436221;
+.about h2, .services h2, .portfolio h2, .tools h2, .book h2, .team h2 {
+  color: #222;
   margin-top: 0;
 }
 .services ul {
@@ -105,11 +122,12 @@ section {
 }
 
 footer {
-  background: #436221;
-  color: #fff;
+  background: #fff;
+  color: #222;
   text-align: center;
   padding: 1.5rem 0 1rem 0;
   font-size: 1rem;
+  border-top: 1px solid #eee;
 }
 
 .portfolio {
@@ -128,14 +146,15 @@ footer {
   margin-top: 1rem;
 }
 .portfolio-item {
-  background: #436221;
-  color: #fff;
+  background: #fff;
+  color: #222;
+  border: 1px solid #eee;
+  box-shadow: none;
   padding: 1rem 2rem;
   border-radius: 8px;
   font-weight: 600;
   flex: 1 1 180px;
   text-align: center;
-  box-shadow: 0 1px 4px rgba(67,98,33,0.07);
 }
 
 .tools {
@@ -156,13 +175,14 @@ footer {
   margin-top: 1rem;
 }
 .tools-list li {
-  background: #bc392a;
-  color: #fff;
+  background: #fff;
+  color: #222;
+  border: 1px solid #eee;
+  box-shadow: none;
   padding: 0.6rem 1.2rem;
   border-radius: 6px;
   font-weight: 500;
   font-size: 1rem;
-  box-shadow: 0 1px 4px rgba(188,57,42,0.07);
 }
 
 .services ul li a {
@@ -182,6 +202,65 @@ footer {
   color: #fff;
 }
 
+.team {
+  background: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(67,98,33,0.04);
+  margin-bottom: 2rem;
+}
+.team h2 {
+  color: #436221;
+}
+.team-list {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+.team-member {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(67,98,33,0.07);
+  padding: 1.5rem 1rem;
+  flex: 1 1 220px;
+  text-align: center;
+  min-width: 180px;
+}
+.team-avatar {
+  width: 64px;
+  height: 64px;
+  background: #ec8827;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 auto 1rem auto;
+  box-shadow: 0 1px 4px rgba(236,136,39,0.12);
+}
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.footer-links {
+  display: flex;
+  gap: 2rem;
+}
+.footer-links a {
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.footer-links a:hover {
+  color: #ec8827;
+}
 @media (max-width: 700px) {
   .header-flex {
     flex-direction: column;
@@ -197,6 +276,18 @@ footer {
     padding: 1rem 0.5rem;
   }
   .logo {
-    height: 45px;
+    height: 65px;
+  }
+  .team-list {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+  .footer-flex {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .footer-links {
+    gap: 1rem;
   }
 } 
